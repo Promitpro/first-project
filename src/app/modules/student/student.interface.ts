@@ -1,4 +1,4 @@
-import { Schema, model, connect, Model, Types } from 'mongoose';
+import { Schema, model, connect, Model, Types, Date } from 'mongoose';
 
 export type TGuardian = {
   fatherName: string;
@@ -28,7 +28,7 @@ export type TStudent = {
   user: Types.ObjectId;
   name: TUserName;
   gender: 'Male' | 'Female' | 'other';
-  dateOfBirth: string;
+  dateOfBirth: Date;
   email: string;
   contactNo: string;
   emergencyContactNo: string;
