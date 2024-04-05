@@ -1,4 +1,4 @@
-import { Schema, model, connect, Model, Types, Date } from 'mongoose';
+import { Model, Types, Date } from 'mongoose';
 
 export type TGuardian = {
   fatherName: string;
@@ -38,6 +38,7 @@ export type TStudent = {
   guardian: TGuardian;
   localGuardian: TLocalGuardian;
   profileImg?: string;
+  addmissionSemester: Types.ObjectId;
   isDeleted: boolean;
 };
 // for creating static
