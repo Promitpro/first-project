@@ -1,6 +1,6 @@
 import { TAcademicSemester } from './academicSemester.interface';
-import { academicSemesterNameCodeMapper } from './academinSemester.constant';
-import { AcademicSemester } from './academinSemester.model';
+import { academicSemesterNameCodeMapper } from './academicSemester.constant';
+import { AcademicSemester } from './academicSemester.model';
 
 const createAcademicSemesterIntoDB = async (payLoad: TAcademicSemester) => {
   // semester name --> semester code
@@ -38,7 +38,7 @@ const updateAcademicSemesterIntoDB = async (
 
 export const AcademicSemesterServices = {
   createAcademicSemesterIntoDB,
-  getAllAcademicSemesterFromDB,
-  getSingleAcademicSemesterFromDB,
+  getAllAcademicSemesterFromDB: getAllAcademicSemesterFromDB,
+  getSingleAcademicSemesterFromDB: getSingleAcademicSemesterFromDB,
   updateAcademicSemesterIntoDB,
 };

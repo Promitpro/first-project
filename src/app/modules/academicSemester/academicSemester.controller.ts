@@ -2,7 +2,7 @@ import { RequestHandler } from 'express';
 import sendResponse from '../../utilities/sendResponse';
 import httpStatus from 'http-status';
 import catchAsync from '../../utilities/catchAsync';
-import { AcademicSemesterServices } from './academicSemester.service';
+import { AcademicSemesterServices as AcademicSemesterServices } from './academicSemester.service';
 
 // RequestHandler defines the type of req, res, next
 const createAcademicSemester: RequestHandler = catchAsync(async (req, res) => {
