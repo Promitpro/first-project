@@ -15,16 +15,16 @@ export type TUser = {
 
 /*
 {
-  "id": "1234567890",
-  "password": "sonalibank",
+    "password": "ami123",
+    "student": {
   "name": {
-    "firstName": "John",
-    "middleName": "",
+    "firstName": "Mohn",
+    "middleName": "Manga",
     "lastName": "Doe"
   },
   "gender": "Male",
   "dateOfBirth": "1990-01-01",
-  "email": "john.doe@example.com",
+  "email": "mohn.doe@example.com",
   "contactNo": "1234567890",
   "emergencyContactNo": "0987654321",
   "bloodGroup": "A+",
@@ -44,7 +44,10 @@ export type TUser = {
     "contactNo": "7778889999",
     "address": "789 Elm St, Villageton"
   },
-  "profileImg": "https://example.com/profile.jpg",
-  "isActive": "active"
+  "addmissionSemester": "660eacdb9099bdcd5ba57126",
+  "academicDepartment": "661801da8962a6d3be520923",
+  "profileImg": "https://example.com/profile.jpg"
+  
+}
 }
 */

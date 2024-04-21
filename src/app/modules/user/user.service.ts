@@ -6,7 +6,7 @@ import { TUser } from './user.interface';
 import { User } from './user.model';
 import { generateStudentId } from './user.utils';
 
-const createStudentIntoDB = async (password: string, studentData: TStudent) => {
+const createStudentIntoDB = async (password: string, payLoad: TStudent) => {
   // creat a user object
   const userData: Partial<TUser> = {};
   // if password is not given
@@ -16,7 +16,7 @@ const createStudentIntoDB = async (password: string, studentData: TStudent) => {
 
   // find academic semester info
   const addmissionSemester = await AcademicSemester.findById(
-    studentData.addmissionSemester,
+    payLoad.addmissionSemester,
   );
 
   //   set manually generated id
@@ -28,9 +28,9 @@ const createStudentIntoDB = async (password: string, studentData: TStudent) => {
   // Object.keys will turn the result into array so with length() we can check is user created
   if (Object.keys(newUser).length) {
     // set id, _id as user
-    studentData.id = newUser.id;
-    studentData.user = newUser._id;
-    const newStudent = await Student.create(studentData);
+    payLoad.id = newUser.id;
+    payLoad.user = newUser._id;
+    const newStudent = await Student.create(payLoad);
     return newStudent;
   }
 };
