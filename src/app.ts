@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
@@ -14,13 +18,17 @@ app.use(cors());
 
 //application routes
 app.use('/api/v1', router);
-
-const getAController = (req: Request, res: Response) => {
-  const a = 10;
-
-  res.send(a);
+const test = async (req: Request, res: Response) => {
+  Promise.reject();
 };
-app.get('/', getAController);
+
+app.get('/', test);
+// const getAController = (req: Request, res: Response) => {
+//   const a = 10;
+
+//   res.send(a);
+// };
+// app.get('/', getAController);
 app.use(globalErrorHandler);
 app.use(notFound);
 

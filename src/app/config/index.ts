@@ -4,6 +4,7 @@ import path from 'path';
 dotenv.config({ path: path.join((process.cwd(), '.env')) });
 //D:\next_level_developer\first-project\.env
 export default {
+  NODE_ENV: process.env.NODE_ENV,
   port: process.env.PORT,
   database_url: process.env.DATABASE_URL,
   bcrypt_salt_rounds: process.env.BCRYPT_SALT_ROUNDS,

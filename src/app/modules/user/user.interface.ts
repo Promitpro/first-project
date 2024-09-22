@@ -47,7 +47,7 @@ export type TUser = {
   "addmissionSemester": "660eacdb9099bdcd5ba57126",
   "academicDepartment": "661801da8962a6d3be520923",
   "profileImg": "https://example.com/profile.jpg"
-  
+  }
 }
-}
+
 */
